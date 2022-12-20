@@ -129,7 +129,7 @@ button {
 }
 
 .special-block-two p {
-  font-family: "SF Pro Display";
+  font-family: "SF Pro Display Ligth";
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -530,7 +530,7 @@ button {
   }
   .Expertise__third-item h3 {
     margin-top: 15px;
-    font-family: "SF Pro Display";
+    font-family: "SF Pro Display Ligth";
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
@@ -581,7 +581,7 @@ button {
 .Expertise__third-item h3 {
   grid-area: item3;
   margin-top: 15px;
-  font-family: "SF Pro Display";
+  font-family: "SF Pro Display Ligth";
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -890,4 +890,218 @@ button {
     max-width: 90%;
     margin-bottom: 15px;
   }
+}
+.Video {
+  width: 100%;
+  min-height: 324px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../img/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+.Video img {
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .Video {
+    min-height: 250px;
+  }
+}
+@media (max-width: 767px) {
+  .Video {
+    min-height: 180px;
+  }
+}
+@media (max-width: 557px) {
+  .Video {
+    background-color: white;
+    min-height: 130px;
+    background-size: contain;
+  }
+  .Video img {
+    width: 10%;
+  }
+}
+.Facts {
+  background-color: white;
+}
+.Facts__container {
+  padding: 165px 94px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.Facts__item {
+  margin: 0px 20px;
+}
+.Facts__item h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 73px;
+  margin-bottom: 9px;
+  color: #242121;
+}
+.Facts__item h3 {
+  text-align: center;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #333333;
+}
+
+@media (max-width: 767px) {
+  .Facts__container {
+    padding: 50px 40px;
+  }
+  .Facts__item {
+    padding: 0px 20px;
+    margin: 0 auto;
+  }
+}
+.Featured {
+  background-color: #F8F6FA;
+}
+.Featured__container {
+  display: flex;
+  width: 100%;
+}
+.Featured__left, .Featured__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 40px;
+}
+.Featured__left img, .Featured__right img {
+  transition: 0.3s;
+  cursor: pointer;
+  width: 100%;
+}
+.Featured__left img:hover, .Featured__right img:hover {
+  width: 120%;
+}
+.Featured__middle {
+  width: 100%;
+  height: 840px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 160px;
+}
+.Featured__title {
+  min-width: 570px;
+  width: 50%;
+  margin-top: 50%;
+  margin-bottom: 15px;
+}
+.Featured__title h2 {
+  font-family: "SF Pro Display Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 52px;
+  color: #242121;
+}
+.Featured__text {
+  min-width: 540px;
+  width: 50%;
+  font-family: "SF Pro Display Ligth";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: #373A39;
+}
+.Featured__buttons {
+  padding: 190px 0px 114px 0px;
+  display: flex;
+  align-items: center;
+}
+.Featured__link {
+  width: 6px;
+  height: 6px;
+  background-color: gray;
+  border-radius: 100%;
+  margin-right: 12px;
+  transition: 0.3s;
+}
+.Featured__link:hover {
+  width: 8px;
+  height: 8px;
+  background-color: #9E9E9E;
+}
+.Featured__right img {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 850px) {
+  .Featured__middle {
+    width: 80%;
+    height: 440px;
+    padding-bottom: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+  .Featured__title {
+    min-width: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 30%;
+    margin-bottom: 15px;
+  }
+  .Featured__title h2 {
+    font-family: "SF Pro Display Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    color: #242121;
+  }
+  .Featured__text {
+    min-width: 0px;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    line-height: 24px;
+  }
+  .Featured__buttons {
+    padding: 30px 0px 40px 0px;
+  }
+  .Featured__left, .Featured__right {
+    padding: 0px 5px;
+    width: 20%;
+  }
+  .Featured__left img, .Featured__right img {
+    width: 50%;
+  }
+  .Featured__left img:hover, .Featured__right img:hover {
+    width: 70%;
+  }
+}
+@media (max-width: 560px) {
+  .Featured__title h2 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.active {
+  width: 10px;
+  height: 10px;
+  background-color: #242121;
+}
+
+.active:hover {
+  width: 10px;
+  height: 10px;
+  background-color: #242121;
 }

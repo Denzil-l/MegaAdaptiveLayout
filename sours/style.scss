@@ -58,7 +58,7 @@ button{
 }
 .special-block-two{
     p{
-        font-family: 'SF Pro Display';
+        font-family: 'SF Pro Display Ligth';
             font-style: normal;
             font-weight: 300;
             font-size: 14px;
@@ -468,7 +468,7 @@ color: #FCBB08;
             }
             h3{
                 margin-top: 15px;
-                font-family: 'SF Pro Display';
+                font-family: 'SF Pro Display Ligth';
                     font-style: normal;
                     font-weight: 300;
                     font-size: 14px;
@@ -524,7 +524,7 @@ color: #FCBB08;
             h3{
                 grid-area: item3;
                 margin-top: 15px;
-                font-family: 'SF Pro Display';
+                font-family: 'SF Pro Display Ligth';
                     font-style: normal;
                     font-weight: 300;
                     font-size: 14px;
@@ -853,4 +853,252 @@ color: #FCBB08;
         }
 
 }
-}    
+}   
+
+.Video {
+    width: 100%;
+    min-height: 324px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    img{
+        cursor: pointer;
+    }
+}
+@media(max-width:1000px){
+    .Video{min-height: 250px;}
+}
+@media(max-width:767px){
+    .Video{min-height: 180px;}
+}
+@media(max-width:557px){
+    .Video{
+        background-color: white;
+        min-height: 130px;
+        background-size: contain;
+        img{
+            width: 10%;
+        }
+    }
+}
+
+.Facts {
+    background-color: white;
+    &__container {
+        padding: 165px 94px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    &__item {
+        margin: 0px 20px;
+        h2{
+            font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 60px;
+                line-height: 73px;
+                margin-bottom: 9px;
+                color: #242121;
+        }
+        h3{
+            text-align: center;
+            font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;            
+                
+                color: #333333;
+        }
+    }
+}
+@media(max-width:767px){
+    .Facts{
+        &__container {
+            padding: 50px 40px;
+         
+        }
+        &__item{
+            padding: 0px 20px;
+            margin: 0 auto;
+        }
+    }
+}
+.Featured {
+    background-color: #F8F6FA;
+    &__container {
+        display: flex;
+        width: 100%;
+
+    }
+    
+    &__left,&__right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 40px;
+        img{
+            transition: .3s;
+            cursor: pointer;
+            width: 100%;
+        }
+        img:hover{
+            width: 120%;
+
+        }
+    }
+    
+    &__middle {
+        width: 100%;
+        height: 840px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 160px;
+
+    }
+    
+    &__title {
+        min-width: 570px;
+        width: 50%;
+        margin-top: 50%;
+        margin-bottom: 15px;
+        h2{
+
+       
+        font-family: 'SF Pro Display Bold';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            // font-size: calc();
+            line-height: 52px;
+        
+            color: #242121;
+        }
+    }
+    
+    &__text {
+        min-width: 540px;
+
+        width: 50%;
+
+        font-family: 'SF Pro Display Ligth';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 24px;
+            color: #373A39;
+    }
+    
+    &__buttons {
+        padding: 190px 0px 114px 0px;
+        display: flex;
+        align-items: center;
+    }
+    &__link {
+        width: 6px;
+        height: 6px;
+        background-color: gray;
+        border-radius: 100%;
+        margin-right: 12px;
+        transition: .3s;
+
+    }
+    &__link:hover{
+        width: 8px;
+        height: 8px;
+        background-color: #9E9E9E;
+    }
+    &__right {
+        img{
+            transform: rotate(180deg);
+        }
+    }
+    }
+@media(max-width:850px){
+    .Featured {
+    
+        &__middle {
+            width: 80%;
+            height: 440px;
+            padding-bottom: 40px;  
+            align-items: center;  
+            justify-content: center;
+        }       
+        &__title {
+            min-width: 0px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-top: 30%;
+            margin-bottom: 15px;
+            h2{
+    
+           
+            font-family: 'SF Pro Display Bold';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 26px;
+                // font-size: calc();
+                line-height: 32px;
+                text-align: center;
+                color: #242121;
+            }
+        }     
+        &__text {
+            min-width: 0px;
+            width: 100%;
+
+            text-align: center;
+
+                font-size: 10px;
+                line-height: 24px;
+        }    
+        &__buttons {
+            padding: 30px 0px 40px 0px;
+        }  
+        &__left,&__right{
+            padding: 0px 5px;
+            width: 20%;
+            img{
+                width: 50%;
+            }
+            img:hover{
+                width: 70%;
+            }
+        }
+        }
+}
+@media(max-width:560px){
+    .Featured {
+        &__title {
+            h2{
+                font-size: 16px;
+                line-height: 22px;
+
+            }
+        }     
+    }
+}
+
+
+   
+    .active {
+        width: 10px;
+        height: 10px;
+        background-color: #242121;
+    }
+    .active:hover{
+        width: 10px;
+        height: 10px;
+        background-color: #242121;
+    }
+      
+    
