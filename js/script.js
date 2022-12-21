@@ -16,3 +16,15 @@ if(burgericon){
         }
     })
 }
+
+const Plan= document.querySelector('.Plan').clientWidth;
+if(Plan < 900){
+    const containerNew = document.querySelectorAll('.Plan__container-new')
+    const planItems = document.querySelectorAll('.Plan__item h2')
+
+    planItems.forEach((e,i) =>{
+        e.addEventListener('click', ()=>{
+            containerNew[i].classList.toggle('active1')
+        })
+    })
+}

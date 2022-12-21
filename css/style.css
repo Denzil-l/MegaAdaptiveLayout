@@ -1094,6 +1094,418 @@ button {
     line-height: 22px;
   }
 }
+.Team {
+  background-color: white;
+  padding: 120px 0px;
+}
+.Team__title {
+  margin-bottom: 102px;
+}
+.Team__people {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.Team__item {
+  max-width: 30%;
+  margin: 0 auto;
+}
+.Team__image {
+  margin-bottom: 35px;
+  width: 100%;
+}
+.Team__image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Team__name {
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #333333;
+  margin-bottom: 12px;
+}
+.Team__function {
+  text-align: center;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #373A39;
+}
+
+@media (max-width: 767px) {
+  .Team {
+    padding: 30px 0px;
+  }
+  .Team__title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .Team__item {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .Team__function {
+    margin-bottom: 20px;
+  }
+}
+.Plan {
+  background: #F6F8FA;
+}
+.Plan__container {
+  width: 100%;
+  padding: 150px 20px;
+}
+.Plan__title {
+  margin-bottom: 90px;
+}
+.Plan__Prices {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.Plan__item {
+  min-width: 30%;
+  background-color: white;
+  padding: 24px;
+}
+.Plan__type {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #242121;
+}
+.Plan__price {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 80px;
+  line-height: 109px;
+  text-align: center;
+  color: #242121;
+  padding: 54px 0px 51px 0px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.Plan__price h3 {
+  font-size: 45px;
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+  margin-top: 40px;
+  line-height: 0;
+}
+.Plan__list {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #242121;
+}
+.Plan__list li {
+  margin-bottom: 30px;
+}
+.Plan__button {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 1.2px;
+  color: #242121;
+  padding: 39px 0px 59px 0px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.Plan__button:hover {
+  letter-spacing: 2px;
+}
+
+@media (max-width: 900px) {
+  .Plan__Prices {
+    display: flex;
+    flex-direction: column;
+  }
+  .Plan__item {
+    cursor: pointer;
+    padding: 0px;
+    min-width: 90%;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+  .Plan__item h2 {
+    padding: 24px;
+    display: block;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    font-size: calc(10px + 1.2236573759vw);
+    line-height: 75px;
+    color: #242121;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .Plan__item h2::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 12px solid black;
+    top: 50%;
+    left: 95%;
+    transform: translate(-100%, -50%);
+  }
+  .Plan__item:hover {
+    box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.2);
+  }
+  .Plan__container-new {
+    transition: all 0.3s;
+    display: none;
+    grid-template: 1fr 1fr/1fr 1fr;
+    grid-template-areas: "item1 item2" "item1 item3";
+    padding: 15px;
+    -webkit-animation: anim1 0.5s forwards;
+            animation: anim1 0.5s forwards;
+  }
+  .Plan__container-new.active1 {
+    transition: 0.3s;
+    display: grid;
+  }
+  .Plan__price {
+    opacity: 0;
+    padding: 0;
+    -webkit-animation: anim2 1s 0.5s forwards;
+            animation: anim2 1s 0.5s forwards;
+    grid-area: item2;
+  }
+  .Plan__list {
+    opacity: 0;
+    -webkit-animation: anim2 1s 0.5s forwards;
+            animation: anim2 1s 0.5s forwards;
+    padding: 0;
+    margin-top: 20px;
+    grid-area: item1;
+  }
+  .Plan__list li {
+    text-align: left;
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  .Plan__button {
+    opacity: 0;
+    -webkit-animation: anim2 1s 0.5s forwards;
+            animation: anim2 1s 0.5s forwards;
+    grid-area: item3;
+    font-size: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .Plan__container {
+    padding: 50px 20px;
+  }
+  .Plan__title {
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .Plan__container-new {
+    max-height: 200px;
+  }
+  .Plan__price {
+    font-size: 50px;
+  }
+  .Plan__price h3 {
+    font-size: 18px;
+  }
+  .Plan__list li {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  .Plan__button {
+    font-size: 12px;
+    padding: 40px 0px 0px 0px;
+  }
+}
+.Partners {
+  background-color: white;
+}
+.Partners__container {
+  display: flex;
+  max-height: 200px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+}
+.Partners__item:not(:last-child) {
+  margin-right: 25px;
+}
+.Partners__item {
+  max-width: 20%;
+  height: 100%;
+}
+.Partners__item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .Partners__container {
+    padding: 10px 20px;
+  }
+}
+.Contact {
+  background-color: white;
+}
+.Contact__container {
+  padding: 100px 20px;
+  display: flex;
+}
+.Contact__left {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Contact__title {
+  padding: 55px 0px 90px 0px;
+}
+.Contact__form {
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 3.70909px;
+  color: #B8B8B8;
+  width: 80%;
+}
+.Contact__name, .Contact__email, .Contact__message {
+  border-bottom: 1px solid black;
+  margin-bottom: 32px;
+}
+.Contact__message {
+  resize: none;
+  max-width: 100%;
+  min-height: 150px;
+}
+.Contact__button {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 16px 70px;
+  color: #FFFFFF;
+  width: 40%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Contact__right {
+  width: 40%;
+}
+.Contact__right img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 1000px) {
+  .Contact__container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .Contact__left {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .Contact__right {
+    width: 90%;
+  }
+}
+@media (max-width: 767px) {
+  .Contact__container {
+    padding: 20px 20px;
+  }
+  .Contact__title {
+    text-align: center;
+    padding: 30px 0px;
+  }
+  .Contact__left {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .Contact__form {
+    width: 100%;
+  }
+  .Contact__button {
+    margin: 0 auto;
+  }
+}
+@-webkit-keyframes anim1 {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 250px;
+  }
+}
+@keyframes anim1 {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 250px;
+  }
+}
+@-webkit-keyframes anim2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes anim2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .active {
   width: 10px;
   height: 10px;
