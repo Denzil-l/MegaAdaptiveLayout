@@ -91,6 +91,18 @@ button {
   background-color: transparent;
 }
 
+.active {
+  width: 10px;
+  height: 10px;
+  background-color: #242121;
+}
+
+.active:hover {
+  width: 10px;
+  height: 10px;
+  background-color: #242121;
+}
+
 ._container {
   padding: 0px 20px;
   max-width: 1170px;
@@ -1506,14 +1518,93 @@ button {
     opacity: 1;
   }
 }
-.active {
-  width: 10px;
-  height: 10px;
-  background-color: #242121;
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #333333;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 32px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.Footer__title {
+  text-align: center;
+  padding: 110px 0px 73px 0px;
+}
+.Footer__title h2 {
+  padding: 0px 35px;
+}
+.Footer__title h2::before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 50%;
+  height: 2px;
+  width: 100%;
+  background-color: #FCBB08;
+  transform: translate(-50%, 0px);
+}
+.Footer__menu {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 65px;
+}
+.Footer__menu li {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 4px;
+  color: #FFFFFF;
+}
+.Footer__menu li:not(:last-child) {
+  margin-right: 25px;
+}
+.Footer__email {
+  margin-bottom: 126px;
 }
 
-.active:hover {
-  width: 10px;
-  height: 10px;
-  background-color: #242121;
+.Bottom {
+  padding: 42px 0px;
+  background: #2A2C2B;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #CCCCCC;
+}
+
+@media (max-width: 767px) {
+  .Footer__menu {
+    flex-wrap: wrap;
+  }
+  .Footer__menu li {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 497px) {
+  .Footer__menu {
+    flex-direction: column;
+  }
+  .Footer__menu li:not(:last-child) {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  .Footer__menu li {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 15px;
+  }
 }
